@@ -100,7 +100,7 @@
           {% if posts %}
             {% for post in posts %}
                 <div class="post-preview">
-                  <a href="{% url 'blog:detalle_post' post.slug %}">
+                  <a href="#">
                     <h2 class="post-title">
                       {{ post.titulo }}
                     </h2>
@@ -115,7 +115,7 @@
                 <hr>
             {% endfor %}
           {% else %}
-            <h1>No existen post registrados!</h1>
+            <h1 class="text-center">No existen post registrados!</h1>
           {% endif %}
           {% endblock contenido %}
 
@@ -149,7 +149,7 @@
     <hr>
 
     <!-- Footer -->
-    <footer class="fixed-bottom navbar-dark bg-dark">
+    <footer class="bottom navbar-dark bg-dark">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
