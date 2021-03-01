@@ -44,19 +44,16 @@
               <a class="nav-link" href="{% url 'blog:index' %}">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Generales</a>
+              <a class="nav-link" href="{% url 'blog:generales' %}">Generales</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Programación</a>
+              <a class="nav-link" href="{% url 'blog:programacion' %}">Programación</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Video juegos</a>
+              <a class="nav-link" href="{% url 'blog:videojuegos' %}">Video juegos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tecnología</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tutoriales</a>
+              <a class="nav-link" href="{% url 'blog:tecnologia' %}">Tecnología</a>
             </li>
           </ul>
         </div>
@@ -86,7 +83,7 @@
                   <input type="text" class="form-control" placeholder="Buscar..." name="buscar" value = "{{ request.GET.buscar }}">
                   <span class="input-group-list">
                     <i class="icon icon-search"></i>
-                    <button type="submit" class="boton btn-success">Buscar</button>
+                    <button type="submit" class="boton btn-secondary">Buscar</button>
                   </span>
                 </div>
               </div>
