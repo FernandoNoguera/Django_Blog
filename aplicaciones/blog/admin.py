@@ -25,7 +25,16 @@ class AutorAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     resources_class = AutorResource
 
 
+class PostResource(resources.ModelResource):
+    class Meta:
+        models = Post
+
+class PostAdmin(ImportExportModelAdmin,admin.ModelAdmin):
+    search_fields = ['titulo','slug', 'descripcion']
+    list_display = ('id','titulo','slug', 'descripcion','estado', 'fecha_creacion')
+    resources_class = PostResource
+
 
 admin.site.register(Categoria,CategoriaAdmin)
 admin.site.register(Autor,AutorAdmin)
-admin.site.register(Post)
+admin.site.register(Post, PostAdmin)
