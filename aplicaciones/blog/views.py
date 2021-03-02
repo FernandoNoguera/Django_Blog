@@ -15,9 +15,9 @@ def home(request):
                                     estado = True,
                                     categoria = Categoria.objects.get(nombre__iexact = 'General'),
                                     ).distinct()
-    paginator = Paginator(posts,1) #para paginado se le pasa los elementos a paginar y la cantidad 
+    paginator = Paginator(posts,5) #para paginado se le pasa los elementos a paginar y la cantidad 
     page = request.GET.get('page') #guardamos la pagina actual en la que nos encontramos navegando en el template
-    posts = paginator.get_page(page)#se vuelve a definir post para definir solo los post que se encuentran en la pagina indicada
+    posts = paginator.get_page(page) #se vuelve a definir post para definir solo los post que se encuentran en la pagina indicada
     return render(request, 'index.html', {'posts':posts})
 
 
@@ -66,7 +66,6 @@ def tecnologia(request):
     paginator = Paginator(posts,5)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
-
     return render(request, 'tecnologia.html', {'posts':posts})
 
 
