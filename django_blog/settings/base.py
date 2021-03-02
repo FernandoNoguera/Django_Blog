@@ -122,3 +122,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
+
+SESSION_COOKIE_AGE = 60*5        
+SESSION_SAVE_EVERY_REQUEST = True
